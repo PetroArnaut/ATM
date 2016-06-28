@@ -16,8 +16,11 @@ public class ATMFactory {
             case "3":
                 operation = new OnLinePayment();
                 break;
-            default:
+            case "4":
                 operation = new Bill();
+                break;
+            default:
+                operation = new ReturnCard();
         }
         return  operation;
     }

@@ -2,7 +2,6 @@ package com.java.hillel;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Random;
 
 public class Card {
 
@@ -12,7 +11,6 @@ public class Card {
     private double amount = 10000;
     private String pinCode;
 
-    private Random rnd;
 
     public Card(CardType type, String cardNumber) {
         this.type = type;

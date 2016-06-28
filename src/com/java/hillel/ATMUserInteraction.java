@@ -13,6 +13,7 @@ public class ATMUserInteraction {
         System.out.println("2 - Get money");
         System.out.println("3 - Mobile payment");
         System.out.println("4 - Print bill");
+        System.out.println("5 - Finish");
         return scanner.next();
     }
 

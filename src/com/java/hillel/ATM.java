@@ -29,8 +29,10 @@ public class ATM {
                 ATMFactory atmFactory = new ATMFactory();
                 Operation operation = atmFactory.getChoice(ATMUserInteraction.printMenu());
                 operation.operation(currentCard);
+                if (operation instanceof ReturnCard)
+                    break;
                 if (!ATMUserInteraction.needToContinue()) {
-                    returnCard();
+                    new ReturnCard().operation(currentCard);
                     break;
                 }
             }
@@ -38,7 +40,4 @@ public class ATM {
             Security.blockCard();
     }
 
-    private static void returnCard() {
-        System.out.println("Pls take your card");
-    }
 }
