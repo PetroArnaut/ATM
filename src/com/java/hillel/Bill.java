@@ -1,8 +1,9 @@
 package com.java.hillel;
 
-public class Bill {
+public class Bill implements Operation{
 
-    public static void printBill(Card card) {
+    public void operation(Card card) {
 
+        System.out.println("You have " + card.getAmount() + " in your account");
     }
 }
