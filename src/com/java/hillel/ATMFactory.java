@@ -22,6 +22,6 @@ public class ATMFactory {
             default:
                 operation = new ReturnCard();
         }
-        return  operation;
+        return operation;
     }
 }

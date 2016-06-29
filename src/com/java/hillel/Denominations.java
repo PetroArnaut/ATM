@@ -20,7 +20,7 @@ public class Denominations {
         tens = (int) (totalMoney / 10);
     }
 
-    public static double calculateSummByDenominations(double summ) {
+    public static int calculateSummByDenominations(int summ) {
         int countOfDenominations = 0;
         int totalSumm = 0;
         while (countOfDenominations <= MAX_DENOMINATIONS && summ > 9) {
