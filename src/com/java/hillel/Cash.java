@@ -12,11 +12,12 @@ public class Cash implements Operation {
         System.out.println("enter amount");
         int temp = scanner.nextInt();
         if (temp + getCommission(temp, card) < card.getAmount()) {
-            if (Denominations.calculateSummByDenominations(temp) != temp) {
-                System.out.println("I can take only " + Denominations.calculateSummByDenominations(temp));
+            int summByDenominations = Denominations.calculateSummByDenominations(temp);
+            if (summByDenominations != temp) {
+                System.out.println("I can take only " + summByDenominations);
                 System.out.println("continue (y / n)");
                 if(scanner.next().equals("y"))
-                    getCash(Denominations.calculateSummByDenominations(temp), card);
+                    getCash(summByDenominations, card);
             } else {
                 getCash(temp, card);
             }

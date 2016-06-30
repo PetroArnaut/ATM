@@ -5,23 +5,17 @@ public class ATMFactory {
 
     public Operation getChoice(String type) {
 
-        Operation operation;
         switch (type) {
             case "1":
-                operation = new CheckBalance();
-                break;
+                return new CheckBalance();
             case "2":
-                operation = new Cash();
-                break;
+                return new Cash();
             case "3":
-                operation = new OnLinePayment();
-                break;
+                return new OnLinePayment();
             case "4":
-                operation = new Bill();
-                break;
+                return new Bill();
             default:
-                operation = new ReturnCard();
+                return new ReturnCard();
         }
-        return operation;
     }
 }
